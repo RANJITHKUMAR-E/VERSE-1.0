@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            VERSE
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			.lft button{
+				margin-left:5px;
+			}
+
+            .Lnk a{
+                font-size: larger;
+            }
+            .Lnk li:hover{
+                background-color: aqua;
+                color: black;
+            }
+            #sec1{
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                border-top: 0%;
+                height: 95%;
+                opacity: 0.7;
+            }
+			#v1{
+                margin-top: 10px;
+				width:130px;
+				height:auto;
+                margin-right: 15px;
+			}
+            #h1{
+                width: 15.4in;
+                height: auto;
+            }
+
+            .About{
+                text-align: center;
+                padding: 20px;
+            }
+            .column{
+                float: left;
+                width: 33.3%;
+                margin-bottom: 16px;
+                padding: 0 8px;
+            }
+            .card{
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                margin: 8px;
+            }
+            .container{
+                padding: 0 16px;
+            }
+
+            .container::after,.row::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .title{
+                color: gray;
+            }
+            .button{
+                border: none;
+                outline: 0;
+                text-align: center;
+                display: inline;
+                padding: 8px;
+                color: white;
+                background-color: #000;
+                cursor: pointer;
+                width: 100%;
+            }
+            .button:hover{
+                background-color: aliceblue;
+                color: #000;
+            }
+            .about{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .Foot1{
+                background-color: #000;
+            }
+            .term a{
+                font-size: larger;
+                color: rgb(104, 100, 100);
+                text-decoration: none;
+            }
+            .term a:hover{
+                color: rgb(239, 237, 237);
+                
+            }
+            .cnt h4{
+                color: rgb(69, 68, 68);
+            }
+            .con{
+                color: aliceblue;
+            }
+            .scl{
+                color: aliceblue;
+            }
+            .scll a img{
+                width: 50px;
+                height: auto;
+                padding: 8px;
+            }
+
+	</style>
+</head>
+
+    <body>
+        <section id="home">
+        <nav class="navbar navbar-default rows navt">
+            <div class="container-fluid col-sm-6">
+                <div class="navbar-header ">
+                    <a href="#home"><img id="v1" src="verse.jpg" class="img-rounded"></a>
+                </div>
+                <ul class="nav navbar-nav  col-sm-8 Lnk">
+                    <li><a href="">Search</a></li>
+                    <li><a href="">Offer</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#foot">Help</a></li>
+                    <li><a href="login.html">LogIn</a></li>
+                </ul>
+            </div>
+            <div class="container-fluid col-sm-6">
+                <form class="navbar-form navbar-left lft">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Location">
+                </div>
+                <button type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"> </span> Search
+                </button>
+                <button type="submit" class="btn btn-info">
+                    <span class="glyphicon glyphicon-user"> </span> Login
+                </button>
+                </form>
+		    </div>
+        </nav></section>
+
+        <section id="sec1" class=" container-fluid img-responsive">
+            <img class="img-responsive" id="h1"  src="TW 1.jpg">
+        </section>
+
+        <section id="offer">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success!</strong> This alert box could indicate a successful or positive action.
+              </div>
+            <marquee>
+
+            </marquee>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container-fluid">
+            <div class="jumbotron">
+                <div class="About">
+                    <h1>About Us </h1>
+                    <p class="well">This is an online booking platform for booking the vehicles for rent.</p>
+                </div> <br><br>
+
+                <h2 style="text-align: center;">Our Team</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="background-color: rgb(255, 255, 255);">
+                            
+                            <img src="bg1.jpg" alt="RK" style="width: 100%;">
+                            <div class="container">
+                                <h2>Ranjith Kumar</h2>
+                                <p class="title">CEO & Founder</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur molestiae eligendi odit id fugit debitis sapiente minima error cum. Impedit, alias aliquam? Veritatis nesciunt maiores id inventore, porro culpa!</p>
+                                <p>ranjithkumarstudies@gmail.com</p>
+                                <button class="button">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="bg1.jpg" alt="RK" style="width: 100%;">
+                            <div class="container">
+                                <h2>Sabarish</h2>
+                                <p class="title">Art Director</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur molestiae eligendi odit id fugit debitis sapiente minima error cum. Impedit, alias aliquam? Veritatis nesciunt maiores id inventore, porro culpa!</p>
+                                <p>sabarishk500@gmail.com</p>
+                                <button class="button">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="bg1.jpg" alt="RK" style="width: 100%;">
+                            <div class="container">
+                                <h2>RK</h2>
+                                <p class="title">Designer</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tenetur molestiae eligendi odit id fugit debitis sapiente minima error cum. Impedit, alias aliquam? Veritatis nesciunt maiores id inventore, porro culpa!</p>
+                                <p>rk@gmail.com</p>
+                                <button class="button">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>    
+        </section>
+
+
+        <section id="foot" class="Foot1">
+            <div class="container "  id="cnt">
+                <div class="row">
+                    <div class="col-sm-4 con">
+                        <h2>Contact</h1><br>
+                        <h4>Help Line : +016621708</h4>
+                        <h4>E-mail    : ranjithkumar@gmail.com</h4>
+                    </div>
+                    <div class="col-sm-4 term">
+                        <h2 style="color: aliceblue;">Policies</h1>
+                        <a src="#">Terms of use</a><br>
+                        <a src="#">Privacy Policy</a><br>
+                        <a src="#">Pricing Policy</a><br>
+                        <a src="#">Insurance Policy</a><br>
+                    </div>
+                    <div class="col-sm-4 scl">
+                        <h2>Social Touch</h1><br>
+                        <p>ONN BIKES IS HERE TO REDEFINE THE WAY YOU TRAVEL!
+                            RENT A BIKE ON AN HOURLY, DAILY, WEEKLY OR EVEN MONTHLY BASIS.
+                            WE ALSO HAVE LONG TERM LEASING SOLUTIONS FOR BUSINESSES WHO ARE INTO LAST MILE DELIVERY THROUGH TWO WHEELERS.</p>
+                        <br><div class=" scll">
+                            <a src="#"><img class="img-circle" src="insta.jpg"></a>
+                            <a src="#"><img class="img-circle" src="fb.jpg"></a>
+                            <a src="#"><img class="img-circle" src="wa.jpg"></a>
+                            <a src="#"><img class="img-circle" src="ln.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+

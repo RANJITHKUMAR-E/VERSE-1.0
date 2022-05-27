@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>JS FORM</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="https://www.jquery-az.com/javascript/alert/dist/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="https://www.jquery-az.com/javascript/alert/dist/sweetalert.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <script type="text/javascript">
+            function JSalert(){
+                swal("Congrats!", "SignUp Success!", "success");
+            }
+        </script>
+        <style>
+            body{
+                background-color:rgb(111, 213, 253);
+            }
+            .Form {
+                background-color: rgb(242, 240, 240);
+                border-radius: 20px;
+                margin-left: 500px;
+                margin-right: 500px;
+                margin-top: 20px;
+                padding-left: 30px;
+                font-size: medium;
+            }
+            #logo{
+                height: 60px;
+                width: auto;
+                border-radius: 50px;
+            }
+            .Form input{
+                border-radius: 20px;
+                height: 40px;
+                width: 300px;
+                border-color: aqua;
+
+            }
+
+            #ckb{
+                height: 20px;
+                width: auto;
+            }
+            #ckl{
+                font-size:medium;
+                text-decoration: none;
+                color: aqua;
+            }
+        </style>
+
+</head>
+<body>
+    <div class="Form form-group row">
+		<form id="form1">
+            <center>
+            <div class="">
+            <img class="img-rounded" src="verse.jpg" id="logo"><br><br>
+
+			<p id="p1"></p>
+			<input type="text" placeholder="Name" name="nm" id="name"  class="form-control"><br>
+			
+			<p id="p2"></p>
+			<input type="text"placeholder="E-mail" name="em" id="mail" class="form-control"><br>
+			
+			<p id="p3"></p>
+			<input placeholder="Date Of Birth" type="text"  name="db" id="dob"  class="form-control"><br>
+			
+			<p id="p4"></p>
+			<input type="text" placeholder="Driving License Number" name="dv" id="lic"  class="form-control"><br>
+			
+            <p id="p5"></p>
+			<input id="an" placeholder="Aadhar Number" type="text" name="an" class="form-control"><br>
+			
+			<p id="p6"></p>
+			<input placeholder="New Password" type="password" name="pw" id="pwd"  class="form-control"><br>
+			
+			<p id="p7"></p>
+			<input placeholder="Confirm Password" type="password" name="pw2" id="pwd2"class="form-control"  ><br>
+			<input  type="checkbox" id="ckb" ><label id="ckl">&nbsp&nbsp&nbspI hereby declare that the details furnished above are true</label>
+			<!--input type="submit" id="sub" value="Sign Up" class="btn btn-default"><br><br-->
+            <a id="btn-login" href="#" onclick="JSalert()" class="btn btn-info">Sign Up  </a><br><br>
+
+			</div>
+		</form>
+        </center>
+        
+    </div>
+
+    <script>
+        window.addEventListener("load",start,false);
+       
+        function start(){
+            document.getElementById("name").addEventListener("blur",br0,false);
+            document.getElementById("mail").addEventListener("blur",br1,false);
+            document.getElementById("dob").addEventListener("blur",br2,false);
+            document.getElementById("lic").addEventListener("blur",br3,false);
+            document.getElementById("an").addEventListener("blur",br4,false);
+            document.getElementById("pwd").addEventListener("blur",br5,false);
+            document.getElementById("pwd2").addEventListener("blur",br6,false);
+
+            
+            document.getElementById("sub").addEventListener("click",sub,false);
+            document.getElementById("pw").addEventListener("focus",pwf,false);
+            document.getElementById("ca").addEventListener("mouseover",over,false);
+            document.getElementById("ca").addEventListener("mouseout",out,false);
+            //document.addEventListener("click",pwf,false);
+        }
+
+        function br0(){
+            var nm=document.getElementById("name");
+            if(nm.value.length<2){ document.getElementById("p1").innerHTML="<span style='color:red;font-size: small;'> *Enter a valid name</span>";}
+            else{ document.getElementById("p1").innerHTML="";   }
+        }
+        function br1(){
+            var em=document.getElementById("mail");
+            if(!(em.value.includes("@")) || em.value.length<=3){ document.getElementById("p2").innerHTML="<span style='color:red;font-size: small;'> *Enter a valid e-mail</span>";}
+            else{ document.getElementById("p2").innerHTML="";   }
+        }
+        function br2(){
+            var db=document.getElementById("dob");
+            if(db.value.length<2){ document.getElementById("p3").innerHTML="<span style='color:red;font-size: small;'> *Enter a valid DOB</span>";}
+            else{ document.getElementById("p3").innerHTML="";   }
+        }
+        function br3(){
+            var lc=document.getElementById("lic");
+            if(lc.value.length<8){ document.getElementById("p4").innerHTML="<span style='color:red;font-size: small;'> *Enter a valid License number</span>";}
+            else{ document.getElementById("p4").innerHTML="";   }
+        }
+        function br4(){
+            var aa=document.getElementById("an");
+            if(aa.value.length<12){ document.getElementById("p5").innerHTML="<span style='color:red;font-size: small;'> *Enter a valid Aadhar number</span>";}
+            else{ document.getElementById("p5").innerHTML="";   }
+        }
+        function br5(){
+            var pw=document.getElementById("pwd");
+            if(pw.value.length<8){ document.getElementById("p6").innerHTML="<span style='color:red;font-size: small;'> *Enter a valid password</span>";}
+            else{ document.getElementById("p6").innerHTML="";   }
+        }
+        function br6(){
+            var pw1=document.getElementById("pwd");
+            var pw2=document.getElementById("pwd2");
+            if(pw2.value.length<8 || !(pw1.localeCompare(pw2))){ document.getElementById("p7").innerHTML="<span style='color:red;font-size: small;'> *Password missmatch</span>";}
+            else{ document.getElementById("p7").innerHTML="";   }
+        }
+        function sub(){
+            window.alert("Are you sure to submit ?");
+            window.alert("Thank you !!");
+        }
+
+    </script>
+</body>
+</html>
